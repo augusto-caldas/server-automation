@@ -3,7 +3,7 @@
 # Prompt user for input
 echo "Enter the hostname (default: host)"
 read -r hostName
-hostName=${hostName:-host}
+hostName=${hostName:-nixos}
 
 echo "Enter the time zone (default: America/New_York)"
 read -r timeZone
@@ -11,7 +11,7 @@ timeZone=${timeZone:-America/New_York}
 
 echo "Enter the username (default: user)"
 read -r userName
-userName=${userName:-user}
+userName=${userName:-admin}
 
 # Create variables.nix file
 cat <<EOF > variables.nix
