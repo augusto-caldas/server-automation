@@ -21,36 +21,23 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${vars.userName} = {
      isNormalUser = true;
-     extraGroups = [ "wheel" "docker" "libvirtd" ]; # Enable ‘sudo’ for the user.
-     shell = pkgs.fish;
+     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+     shell = pkgs.bash;
      packages = with pkgs; [
-       htop
-       speedtest-cli
        docker-compose
+       htop
        tmux
-       tree
        wget
      ];
    };
 
-  # Enable fish shell
-  programs.fish.enable = true;
-
-  # Setup fish shell
-  environment.shells = with pkgs; [ fish ];
-
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-  
-  # Enable libvirtd
-  virtualisation.libvirtd.enable = true;
 
   # Setup docker  
   virtualisation.docker.enable = true;
   virtualisation.docker.storageDriver = "btrfs";
 
   # Version system was installed
-  system.stateVersion = "23.05";
-
+  system.stateVersion = "24.11";
 }
-
