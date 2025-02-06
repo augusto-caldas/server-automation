@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# Prompt user for input
 echo "Enter the hostname (default: host)"
 read -r hostName
 hostName=${hostName:-nixos}
@@ -14,6 +13,7 @@ read -r userName
 userName=${userName:-admin}
 
 # Create variables.nix file
+echo "Creating variables.nix file..."
 cat <<EOF > variables.nix
 {
   hostName = "${hostName}";
@@ -21,12 +21,11 @@ cat <<EOF > variables.nix
   userName = "${userName}";
 }
 EOF
-
 echo "variables.nix has been created successfully!"
 
 # Copy .nix files to /etc/nixos/
 sudo cp variables.nix /etc/nixos/variables.nix
 sudo cp configuration.nix /etc/nixos/configuration.nix
 
-echo "Configuration files have been copied succesffuly!"
-echo "Please run 'sudo nixos-rebuild boot --upgrade' to build the system with new configuration and reboot the system"
+echo "Configuration files have been copied successfully!"
+echo "Please run 'sudo nixos-rebuild boot --upgrade' to build the system with new configuration and reboot the system once done"
