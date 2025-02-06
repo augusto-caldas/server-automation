@@ -19,21 +19,21 @@ do
       ;;
 
     "1")
-      echo "Installing Nextcloud..."
+      echo "Nextcloud setup is not available at the moment"
       ;;
 
     "2")
-      echo "Installing Bitwarden..."
+      echo "Bitwarden setup is not available at the moment"
       ;;
 
     "3")
-      echo "Installing Jellyfin..."
+      echo "Jellyfin setup is not available at the moment"
       ;;
 
     "4")
       echo "Installing Minecraft server..."
       mkdir minecraft-server
-      wget -P ./minecraft-server "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/minecraft-setup.sh"
+      wget -P ./minecraft-server "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/services-setup-scripts/minecraft-setup.sh"
       bash ./minecraft-server/minecraft-setup.sh
       ;;
 
