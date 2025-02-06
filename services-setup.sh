@@ -27,7 +27,10 @@ do
       ;;
 
     "3")
-      echo "Jellyfin setup is not available at the moment"
+      echo "Installing Jellyfin..."
+      mkdir jellyfin
+      wget -P ./jellyfin "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/jellyfin-setup.sh"
+      bash ./jellyfin/jellyfin-setup.sh
       ;;
 
     "4")

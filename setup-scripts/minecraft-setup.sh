@@ -1,4 +1,4 @@
-echo "Downloading Docker compose file and creating folders..."
+echo "Downloading Docker compose file and creating directories..."
 wget -P ./minecraft-server "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/configuration-files/docker-compose.minecraft.yaml"
 mkdir ./minecraft-server/data
 
