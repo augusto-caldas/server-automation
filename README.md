@@ -17,7 +17,7 @@ setup</a>.
 
 <h3>Guide</h3>
 
-Start by running the following commands:<br>
+Start by running the following commands in your NixOS Server:<br>
 
 If you already have "wget" installed you can skip the first command
 
@@ -25,7 +25,7 @@ If you already have "wget" installed you can skip the first command
 nix-shell -p wget
 ```
 
-Download nix-setup.sh script
+Download "nix-setup.sh" script
 
 ```bash
 wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/nix-setup.sh"
@@ -42,9 +42,8 @@ Feel free to make any changes in the configuration.nix file and expand your serv
 <hr>
 
 <h2 id="services-setup">Services Setup</h2>
-This script will create the proper environment to deploy services available in this project.<br>
-
-The services provided for now are:<br>
+This script will create the proper environment and deploy the services available in this project.<br>
+The services available for now are:
 
 1. ~~Nextcloud~~
 2. ~~Bitwarden~~
@@ -55,8 +54,9 @@ To proceed with the installation of the services you have to have completed the 
 have a Linux system with "wget", "docker" and "docker-compose" installed.<br>
 
 <h3>Guide</h3>
+Start by running the following commands in your Server System:
 
-Download services-setup.sh script
+Download "services-setup.sh" script
 
 ```bash
 wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/services-setup.sh"
