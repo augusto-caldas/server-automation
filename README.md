@@ -8,11 +8,12 @@ This project contains:<br>
 
 <hr>
 
-<h2>NixOS Setup</h2>
-This script will create a configuration.nix file containing the basic nix configuration to deploy the services provided 
+<h2 id="nix-setup">NixOS Setup</h2>
+This script will create a configuration.nix file containing the basic nix configuration to deploy the services provided
 in this project.<br>
 In case you already have a configured system (It doesn't necessary have to be a NixOS system) with "wget", "docker"
-and "docker-compose" installed this script can be ignored and you can proceed to the services setup.
+and "docker-compose" installed this script can be ignored and you can proceed to <a href="#services-setup">services
+setup</a>.
 
 <h3>Guide</h3>
 
@@ -40,9 +41,7 @@ Feel free to make any changes in the configuration.nix file and expand your serv
 
 <hr>
 
-<h2>Services Setup</h2>
-To proceed with the installation of the services you have to complete the NixOS Setup or have a Linux system with
-"wget", "docker" and "docker-compose" installed.<br>
+<h2 id="services-setup">Services Setup</h2>
 This script will create the proper environment to deploy services available in this project.<br>
 
 The services provided for now are:<br>
@@ -51,6 +50,9 @@ The services provided for now are:<br>
 2. ~~Bitwarden~~
 3. ~~Jellyfin~~
 4. Minecraft
+
+To proceed with the installation of the services you have to have completed the <a href="#nix-setup">NixOS setup</a> or
+have a Linux system with "wget", "docker" and "docker-compose" installed.<br>
 
 <h3>Guide</h3>
 
