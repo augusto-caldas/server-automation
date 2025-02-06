@@ -14,7 +14,7 @@ echo -n ">> "
 read -r MINECRAFT_MAX_MEMORY
 MINECRAFT_MAX_MEMORY=${MINECRAFT_MAX_MEMORY:-8G}
 
-cat <<EOF > minecraft.env
+cat <<EOF > ./minecraft-server/minecraft.env
 EULA="TRUE"
 MAX_MEMORY="${MINECRAFT_MAX_MEMORY}G"
 VERSION="${MINECRAFT_VERSION}"
