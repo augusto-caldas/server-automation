@@ -33,7 +33,7 @@ do
     "4")
       echo "Installing Minecraft server..."
       mkdir minecraft-server
-      wget -P ./minecraft-server "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/services-setup-scripts/minecraft-setup.sh"
+      wget -P ./minecraft-server "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/minecraft-setup.sh"
       bash ./minecraft-server/minecraft-setup.sh
       ;;
 

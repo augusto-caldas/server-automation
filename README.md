@@ -9,8 +9,8 @@ This project contains:<br>
 <hr>
 
 <h2>NixOS Setup</h2>
-This script will create a file containing the basic nix configuration to deploy the services provided in this
-project.<br>
+This script will create a configuration.nix file containing the basic nix configuration to deploy the services provided 
+in this project.<br>
 In case you already have a configured system (It doesn't necessary have to be a NixOS system) with "wget", "docker"
 and "docker-compose" installed this script can be ignored and you can proceed to the services setup.
 
@@ -33,7 +33,7 @@ wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/he
 Run script and follow with the installation
 
 ```bash
-sudo bash ./nix-setup
+sudo bash ./nix-setup.sh
 ```
 
 Feel free to make any changes in the configuration.nix file and expand your server functionality.

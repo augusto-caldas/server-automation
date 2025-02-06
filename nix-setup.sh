@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Downloading default configuration file..."
-wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/configuration.nix"
+wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/configuration-files/configuration.nix"
 
 echo "Enter the username (default: admin)"
 echo -n ">> "
