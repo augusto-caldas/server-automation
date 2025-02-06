@@ -9,4 +9,4 @@ services:
     env_file:
       ./minecraft.env
     volumes:
-      - ./minecraft:/data
+      - ./data:/data
