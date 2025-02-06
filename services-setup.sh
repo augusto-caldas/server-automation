@@ -6,7 +6,7 @@ do
   echo "1. Nextcloud"
   echo "2. Bitwarden"
   echo "3. Jellyfin"
-  echo "4. Minecraft Server"
+  echo "4. Minecraft server"
   echo "0. Exit"
   echo -n ">> "
   read -r SERVICE
@@ -15,7 +15,7 @@ do
 
     "0")
       echo "Closing..."
-      exit 1
+      exit 0
       ;;
 
     "1")
@@ -31,7 +31,9 @@ do
       ;;
 
     "4")
-      echo "Installing Minecraft Server..."
+      echo "Installing Minecraft server..."
+      wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/minecraft-setup.sh"
+      bash ./minecraft-setup.sh
       ;;
 
     *)

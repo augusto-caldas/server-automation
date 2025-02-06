@@ -1,24 +1,27 @@
 #!/usr/bin/env bash
 
-echo "Enter the hostname (default: host)"
-read -r hostName
-hostName=${hostName:-nixos}
+echo "Enter the host name (default: host)"
+echo -n ">> "
+read -r HOST_NAME
+HOST_NAME=${HOST_NAME:-nixos}
 
 echo "Enter the time zone (default: America/New_York)"
-read -r timeZone
-timeZone=${timeZone:-America/New_York}
+echo -n ">> "
+read -r TIME_ZONE
+TIME_ZONE=${TIME_ZONE:-America/New_York}
 
 echo "Enter the username (default: user)"
-read -r userName
-userName=${userName:-admin}
+echo -n ">> "
+read -r USERNAME
+USERNAME=${USERNAME:-admin}
 
 # Create variables.nix file
 echo "Creating variables.nix file..."
 cat <<EOF > variables.nix
 {
-  hostName = "${hostName}";
-  timeZone = "${timeZone}";
-  userName = "${userName}";
+  hostName = "${HOST_NAME}";
+  timeZone = "${TIME_ZONE}";
+  userName = "${USERNAME}";
 }
 EOF
 echo "variables.nix has been created successfully!"
