@@ -47,7 +47,7 @@ The services available for now are:
 
 1. ~~Nextcloud~~
 2. ~~Bitwarden~~
-3. ~~Jellyfin~~
+3. Jellyfin
 4. Minecraft
 
 To proceed with the installation of the services you have to have completed the <a href="#nix-setup">NixOS setup</a> or
