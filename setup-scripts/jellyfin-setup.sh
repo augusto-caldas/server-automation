@@ -8,4 +8,4 @@ echo "File downloaded and directories created successfully!"
 read -r -p "<Press enter to continue and start service>"
 
 echo "Starting docker..."
-docker-compose -f ./jellyfin/docker-compose.jellyfin up -d
+docker-compose -f ./jellyfin/docker-compose.jellyfin.yaml up -d
