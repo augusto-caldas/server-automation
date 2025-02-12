@@ -24,7 +24,7 @@ do
     fi
 done
 
-cat <<EOF > ./vaultwarden/bitwarden.env
+cat <<EOF > ./vaultwarden/vaultwarden.env
 DOMAIN="${DOMAIN}"
 ADMIN_TOKEN="${ADMIN_TOKEN}"
 EOF
