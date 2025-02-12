@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 echo "Downloading default configuration file..."
-wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/configuration-files/configuration.nix"
+mkdir nixos
+wget -P nixos "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/configuration-files/configuration.nix"
 
 echo "Enter the username (default: admin)"
 echo -n ">> "
@@ -19,7 +20,7 @@ TIME_ZONE=${TIME_ZONE:-Europe/Dublin}
 
 # Create variables.nix file
 echo "Creating variables.nix file..."
-cat <<EOF > variables.nix
+cat <<EOF > ./nixos/variables.nix
 {
   hostName = "${HOST_NAME}";
   timeZone = "${TIME_ZONE}";
@@ -28,9 +29,15 @@ cat <<EOF > variables.nix
 EOF
 echo "variables.nix has been created successfully!"
 
-# Copy .nix files to /etc/nixos/
-sudo cp variables.nix /etc/nixos/variables.nix
-sudo cp configuration.nix /etc/nixos/configuration.nix
+# Warning user
+echo "All the configuration files will be copied to /etc/nixos."
+echo "This means it will overwrite the configuration.nix file in the directory."
+read -r -p "<Press enter to continue or ctrl + c to cancel>"
 
-echo "Configuration files have been copied successfully! Feel free to make any changes in the default configuration file found in /etc/nixos/"
+# Copy .nix files to /etc/nixos/
+sudo cp ./nixos/variables.nix /etc/nixos/variables.nix
+sudo cp ./nixos/configuration.nix /etc/nixos/configuration.nix
+
+echo "Configuration files have been copied successfully!"
+echo "Feel free to make any changes in the default configuration file found in /etc/nixos/"
 echo "Please run 'sudo nixos-rebuild boot --upgrade' to build the system with new configuration and reboot the system once done"
