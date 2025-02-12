@@ -6,17 +6,17 @@ wget -P nixos "https://raw.githubusercontent.com/augusto-caldas/server-automatio
 echo "Enter the username (default: admin)"
 echo -n ">> "
 read -r USERNAME
-USERNAME=${USERNAME:-admin}
+USERNAME=${USERNAME:-"admin"}
 
 echo "Enter the host name (default: nixos)"
 echo -n ">> "
 read -r HOST_NAME
-HOST_NAME=${HOST_NAME:-nixos}
+HOST_NAME=${HOST_NAME:-"nixos"}
 
 echo "Enter the time zone (default: Europe/Dublin)"
 echo -n ">> "
 read -r TIME_ZONE
-TIME_ZONE=${TIME_ZONE:-Europe/Dublin}
+TIME_ZONE=${TIME_ZONE:-"Europe/Dublin"}
 
 # Create variables.nix file
 echo "Creating variables.nix file..."
