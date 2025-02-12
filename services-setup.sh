@@ -23,7 +23,11 @@ do
       ;;
 
     "2")
-      echo "Bitwarden setup is not available at the moment"
+
+      echo "Installing Bitwarden..."
+      mkdir bitwarden
+      wget -P ./bitwarden "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/bitwarden-setup.sh"
+      bash ./bitwarden/bitwarden-setup.sh
       ;;
 
     "3")
