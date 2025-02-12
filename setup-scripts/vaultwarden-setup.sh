@@ -4,14 +4,14 @@ mkdir ./vaultwarden/data
 
 echo "Creating environment file..."
 
-echo "Enter domain or subdomain where you'll host Vaultwarden (default: nixos)"
+echo "Enter domain/subdomain where you'll host Vaultwarden, has to start with http:// or https:// (default: http://nixos)"
 echo -n ">> "
 read -r DOMAIN
 DOMAIN=${DOMAIN:-"nixos"}
 
 while true;
 do
-    echo "Enter admin token, preferably a secure random string that you can store somewhere safe (Min. 5 characters)"
+    echo "Enter admin token (Min. 5 characters and preferably a secure random string)"
     echo -n ">> "
     read -r ADMIN_TOKEN
 
