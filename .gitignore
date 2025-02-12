@@ -1,6 +1,6 @@
 variables.nix
 .idea
 nextcloud.env
-bitwarden.env
+vaultwarden.env
 jellyfin.env
 minecraft.env

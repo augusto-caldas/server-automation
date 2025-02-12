@@ -4,7 +4,7 @@ while true;
 do
   echo "Choose a service to be installed"
   echo "1. Nextcloud"
-  echo "2. Bitwarden"
+  echo "2. Vaultwarden"
   echo "3. Jellyfin"
   echo "4. Minecraft server"
   echo "0. Exit"
@@ -24,10 +24,10 @@ do
 
     "2")
 
-      echo "Installing Bitwarden..."
-      mkdir bitwarden
-      wget -P ./bitwarden "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/bitwarden-setup.sh"
-      bash ./bitwarden/bitwarden-setup.sh
+      echo "Installing Vaultwarden..."
+      mkdir vaultwarden
+      wget -P ./vaultwarden "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/vaultwarden-setup.sh"
+      bash ./vaultwarden/vaultwarden-setup.sh
       ;;
 
     "3")

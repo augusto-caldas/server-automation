@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  vaultwarden:
+    container_name: vaultwarden
+    image: vaultwarden/server:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - WEBSOCKET_ENABLED=true
+    env_file:
+      ./vaultwarden.env
+    volumes:
+      - ./data:/data

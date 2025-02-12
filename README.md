@@ -46,7 +46,7 @@ This script will create the proper environment and deploy the services available
 The services available for now are:
 
 1. ~~Nextcloud~~
-2. ~~Bitwarden~~
+2. Vaultwarden
 3. Jellyfin
 4. Minecraft
 
