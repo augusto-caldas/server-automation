@@ -1,9 +1,9 @@
 <h1>server-automation</h1>
 This project contains:<br>
 
-1. A script (nix-setup.sh) to create a configuration.nix file with basic configuration to deploy the services provided
+1. A script (<a href="#nix-setup">nix-setup.sh</a>) to create a configuration.nix file with basic configuration to deploy the services provided
    in this project.<br>
-2. A script (services-setup.sh) to create a proper structure and docker-compose files with basic configurations to
+2. A script (<a href="#services-setup">services-setup.sh</a>) to create a proper structure and docker-compose files with basic configurations to
    deploy services with ease.<br>
 
 <hr>
@@ -46,9 +46,11 @@ This script will create the proper environment and deploy the services available
 The services available for now are:
 
 1. ~~Nextcloud~~
-2. Vaultwarden
-3. Jellyfin
-4. Minecraft
+2. [Vaultwarden](https://github.com/dani-garcia/vaultwarden)
+3. [Jellyfin](https://jellyfin.org/)
+4. [Minecraft](https://www.minecraft.net/)
+5. [MySQL](https://www.mysql.com/)
+6. [MongoDB](https://www.mongodb.com/)
 
 To proceed with the installation of the services you have to have completed the <a href="#nix-setup">NixOS setup</a> or
 have a Linux system with "wget", "docker" and "docker-compose" installed.<br>

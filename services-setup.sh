@@ -7,6 +7,8 @@ do
   echo "2. Vaultwarden"
   echo "3. Jellyfin"
   echo "4. Minecraft server"
+  echo "5. MySQL"
+  echo "6. MongoDB"
   echo "0. Exit"
   echo -n ">> "
   read -r SERVICE
@@ -23,7 +25,6 @@ do
       ;;
 
     "2")
-
       echo "Installing Vaultwarden..."
       mkdir vaultwarden
       wget -P ./vaultwarden "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/vaultwarden-setup.sh"
@@ -42,6 +43,20 @@ do
       mkdir minecraft-server
       wget -P ./minecraft-server "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/minecraft-setup.sh"
       bash ./minecraft-server/minecraft-setup.sh
+      ;;
+
+    "5")
+      echo "Installing MySQL..."
+      mkdir mysql
+      wget -P ./mysql "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/mysql-setup.sh"
+      bash ./mysql/mysql-setup.sh
+      ;;
+
+    "6")
+      echo "Installing MongoDB..."
+      mkdir mongodb
+      wget -P ./mongodb "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/mongodb-setup.sh"
+      bash ./mongodb/mongodb-setup.sh
       ;;
 
     *)
