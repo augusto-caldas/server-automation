@@ -2,7 +2,7 @@ version: "3"
 
 services:
   minecraft:
-    container_name: minecraft
+    container_name: minecraft-server
     image: itzg/minecraft-server:latest
     restart: unless-stopped
     ports:
