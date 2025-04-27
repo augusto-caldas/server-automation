@@ -47,8 +47,10 @@ while true; do
 
     "1")
       if check_and_prompt "./nextcloud" "nextcloud"; then
-        echo "Nextcloud setup is not available at the moment."
-        # Here you would place the setup commands when available
+        echo "Installing Nextcloud..."
+        mkdir nextcloud
+        wget -P ./nextcloud "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/setup-scripts/nextcloud-setup.sh"
+        bash ./nextcloud/nextcloud-setup.sh
       fi
       ;;
 
