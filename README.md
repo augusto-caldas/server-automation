@@ -45,7 +45,7 @@ Feel free to make any changes in the configuration.nix file and expand your serv
 This script will create the proper environment and deploy the services available in this project.<br>
 The services available for now are:
 
-1. ~~Nextcloud~~
+1. [Nextcloud](https://nextcloud.com/)
 2. [Vaultwarden](https://github.com/dani-garcia/vaultwarden)
 3. [Jellyfin](https://jellyfin.org/)
 4. [Minecraft](https://www.minecraft.net/)
