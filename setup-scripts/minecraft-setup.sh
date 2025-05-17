@@ -9,10 +9,10 @@ echo -n ">> "
 read -r MINECRAFT_VERSION
 MINECRAFT_VERSION=${MINECRAFT_VERSION:-"1.21.4"}
 
-echo "Enter max memory (default: 8G)"
+echo "Enter max memory in GB (default: 8)"
 echo -n ">> "
 read -r MINECRAFT_MAX_MEMORY
-MINECRAFT_MAX_MEMORY=${MINECRAFT_MAX_MEMORY:-"8G"}
+MINECRAFT_MAX_MEMORY=${MINECRAFT_MAX_MEMORY:-"8"}
 
 cat <<EOF > ./minecraft-server/minecraft.env
 EULA="TRUE"
