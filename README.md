@@ -70,6 +70,8 @@ Run script and follow with the installation (sudo is not required but it's recom
 bash ./services-setup.sh
 ```
 
+<hr>
+
 <h3 id="docker-commands">Docker commands</h3>
 Some important commands to manage your docker containers:<br>
 
