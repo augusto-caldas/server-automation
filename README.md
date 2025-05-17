@@ -84,7 +84,7 @@ docker ps
 List all dockers (including not running)
 
 ```bash
-docker ps
+docker ps -a
 ```
 
 Stop docker
