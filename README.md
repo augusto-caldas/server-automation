@@ -31,7 +31,7 @@ Download "nix-setup.sh" script
 wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/nix-setup.sh"
 ```
 
-Run script and follow with the installation
+Run script and follow with the installation (sudo is required since it has to have access to '/etc/nixos/' directory)
 
 ```bash
 sudo bash ./nix-setup.sh
@@ -64,8 +64,8 @@ Download "services-setup.sh" script
 wget "https://raw.githubusercontent.com/augusto-caldas/server-automation/refs/heads/main/services-setup.sh"
 ```
 
-Run script and follow with the installation
+Run script and follow with the installation (sudo is not required but it's recommended to avoid any errors with directory access permissions)
 
 ```bash
-sudo bash ./services-setup.sh
+bash ./services-setup.sh
 ```
